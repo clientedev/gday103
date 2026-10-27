@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
+  <!-- Fundo Vermelho Oficial SENAI -->
+  <rect width="400" height="100" fill="#E30613"/>
+  
+  <!-- Linhas Brancas Laterais Esquerda (5 traços horizontais) -->
+  <rect x="0" y="15" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="0" y="31" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="0" y="47" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="0" y="63" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="0" y="79" width="22" height="4" fill="#FFFFFF"/>
+  
+  <!-- Linhas Brancas Laterais Direita (5 traços horizontais) -->
+  <rect x="378" y="15" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="378" y="31" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="378" y="47" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="378" y="63" width="22" height="4" fill="#FFFFFF"/>
+  <rect x="378" y="79" width="22" height="4" fill="#FFFFFF"/>
+  
+  <!-- Tipografia Oficial Slanted SENAI -->
+  <text x="200" y="81" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-style="italic" font-size="78" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">SENAI</text>
+</svg>
