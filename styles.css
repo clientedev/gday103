@@ -334,8 +334,8 @@ button {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 36px;
   align-items: center;
 }
 
@@ -499,9 +499,10 @@ button {
    ========================================================================== */
 .hero-media-showcase {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
   position: relative;
+  align-items: stretch;
 }
 
 .showcase-card {
@@ -512,10 +513,7 @@ button {
   box-shadow: var(--shadow-md);
   background: #0D0E12;
   transition: transform 0.25s var(--ease-google), box-shadow 0.25s var(--ease-google);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 380px;
+  height: 380px;
 }
 
 .showcase-card:hover {
@@ -524,20 +522,40 @@ button {
   border-color: var(--g-blue);
 }
 
+.showcase-poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080A0F;
+}
+
 .showcase-poster img {
   width: 100%;
-  height: 380px;
-  object-fit: contain; /* Não corta o cartaz de forma alguma! */
+  height: 100%;
+  object-fit: contain; /* Não corta o cartaz oficial de forma alguma */
   background: radial-gradient(circle at center, rgba(66, 133, 244, 0.12) 0%, rgba(15, 17, 23, 0.98) 100%);
   display: block;
+  padding: 6px;
+}
+
+.showcase-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #090B10;
 }
 
 .showcase-stage img {
   width: 100%;
-  height: 380px;
-  object-fit: contain; /* Não corta a foto de forma alguma! */
-  background: #090B10;
+  height: 100%;
+  object-fit: cover; /* Preenche a largura inteira dando destaque enorme à foto deitada */
+  object-position: center 30%;
   display: block;
+  transition: transform 0.4s var(--ease-google);
+}
+
+.showcase-stage:hover img {
+  transform: scale(1.03);
 }
 
 .showcase-badge {

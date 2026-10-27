@@ -13,443 +13,443 @@
 const galleryData = [
   {
     "id": 1,
-    "file": "cartaz-oficial.jpg",
-    "title": "Cartaz Oficial: Um Dia SENAI + Google de IA",
-    "category": "cenografia",
-    "categoryLabel": "Identidade Oficial Google + SENAI",
-    "tag": "Cartaz Oficial",
-    "wide": false,
-    "caption": "Cartaz oficial do evento 'Um Dia SENAI + Google de IA' realizado em 27 de outubro de 2026 na Escola SENAI \"Morvan Figueiredo\" CFP 1.03 (Rua do Oratório, 215 - Mooca): \"Inteligência artificial para aprender, criar e explorar novas possibilidades\"."
+    "file": "aa73a3e2-a177-4841-a842-73d9a274e579.jpg",
+    "title": "Abertura Oficial no Palco com Instrutor SENAI",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Abertura Oficial",
+    "wide": true,
+    "caption": "Instrutor do SENAI no palco do auditório conduzindo a abertura oficial de 'Um Dia SENAI + Google de IA' para os estudantes da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
   },
   {
     "id": 2,
-    "file": "WhatsApp Image 2026-10-27 at 13.47.05.jpeg",
-    "title": "Abertura com o Docente Gabriel Eduardo",
-    "category": "remoter",
-    "categoryLabel": "Docente Gabriel Eduardo",
-    "tag": "Docente Gabriel Eduardo",
+    "file": "WhatsApp Image 2026-10-27 at 15.45.56.jpeg",
+    "title": "Comunidade Acadêmica em Celebração",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Celebração Geral",
     "wide": true,
-    "caption": "O Docente Gabriel Eduardo no palco do auditório conduzindo a abertura oficial de 'Um Dia SENAI + Google de IA' para os estudantes da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
+    "caption": "Docentes, coordenação e turmas da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 reunidos no auditório ao final da imersão com o painel 'Obrigado pela sua participação!'."
   },
   {
     "id": 3,
-    "file": "aa73a3e2-a177-4841-a842-73d9a274e579.jpg",
-    "title": "Docente Gabriel Eduardo Conduzindo a Imersão",
-    "category": "remoter",
-    "categoryLabel": "Docente Gabriel Eduardo",
-    "tag": "Liderança Pedagógica",
-    "wide": true,
-    "caption": "Visão de palco do Docente Gabriel Eduardo, facilitador pedagógico do SENAI, articulando os desafios práticos do Google Gemini com a formação profissional dos alunos."
-  },
-  {
-    "id": 4,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.45 (1).jpeg",
-    "title": "Docente Gabriel Eduardo e Equipe: Entrega de Prêmios",
-    "category": "remoter",
-    "categoryLabel": "Docente Gabriel Eduardo",
-    "tag": "Premiação & Squeezes",
-    "wide": false,
-    "caption": "Registro especial com o Docente Gabriel Eduardo, equipe organizadora e estudante premiado com squeeze térmica exclusiva após desvendar os desafios de engenharia de prompts."
-  },
-  {
-    "id": 5,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.46 (1).jpeg",
-    "title": "Docente Gabriel Eduardo na Dinâmica de Cartões",
-    "category": "remoter",
-    "categoryLabel": "Docente Gabriel Eduardo",
-    "tag": "Engenharia de Prompts",
-    "wide": false,
-    "caption": "O Docente Gabriel Eduardo com a equipe no pátio da escola coordenando a entrega e validação dos cartões de prompt sorteados durante o evento."
-  },
-  {
-    "id": 6,
-    "file": "WhatsApp Image 2026-10-27 at 15.45.56.jpeg",
-    "title": "Comunidade Acadêmica e Docentes em Celebração",
-    "category": "remoter",
-    "categoryLabel": "Docente Gabriel Eduardo",
-    "tag": "Celebração Geral",
-    "wide": true,
-    "caption": "Docentes, facilitador Gabriel Eduardo e turmas da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 reunidos no auditório ao final da jornada de inteligência artificial comemorando o aprendizado conjunto."
-  },
-  {
-    "id": 7,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.50.jpeg",
-    "title": "Semana da Biblioteca: Lançamento da Prompioteca",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Prompioteca Oficial",
-    "wide": false,
-    "caption": "Na Semana da Biblioteca escolar, aluna apresenta a Prompioteca desenvolvida pelos estudantes: catálogo de comandos e prompts formatados para estudo de literatura, projetos técnicos e pesquisa na Plataforma Conecta."
-  },
-  {
-    "id": 8,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.47 (1).jpeg",
-    "title": "Oficina de Literatura com Inteligência Artificial",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Literatura & IA",
-    "wide": true,
-    "caption": "Estudantes reunidos nas mesas redondas da biblioteca durante a Semana da Biblioteca, combinando obras literárias clássicas com comandos de IA para geração de capas e análises temáticas."
-  },
-  {
-    "id": 9,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.48.jpeg",
-    "title": "Workshop da Plataforma Conecta (Biblioteca Digital)",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Plataforma Conecta SENAI",
-    "wide": false,
-    "caption": "Apresentação da Plataforma Conecta SENAI — a biblioteca digital oficial que dá acesso a milhares de livros e periódicos técnicos —, tema central do workshop literário e digital da Semana da Biblioteca."
-  },
-  {
-    "id": 10,
-    "file": "b1ef1a2d-6246-4c2c-b33d-382122c9452e.jpg",
-    "title": "Roleta Interativa na Sala de Estudos da Biblioteca",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Gamificação Literária",
-    "wide": true,
-    "caption": "Dinâmica da roleta interativa sorteando autores, clássicos da literatura e desafios de prompt em tempo real durante a Semana da Biblioteca na Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
-  },
-  {
-    "id": 11,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.47.jpeg",
-    "title": "Visão Geral das Oficinas na Biblioteca Escolar",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Ambiente Colaborativo",
-    "wide": false,
-    "caption": "Sala de estudos da biblioteca repleta de alunos engajados na resolução prática dos desafios de comandos e pesquisa na biblioteca digital Conecta."
-  },
-  {
-    "id": 12,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.48 (1).jpeg",
-    "title": "Engenharia de Prompts para Clássicos da Literatura",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Criação Literária",
-    "wide": true,
-    "caption": "Alunos utilizando técnicas avançadas de prompt para estruturar resenhas, análises de personagens e capas alternativas de livros do acervo."
-  },
-  {
-    "id": 13,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.49 (1).jpeg",
-    "title": "Encontro de Ideias na Semana da Biblioteca",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Conexão Criativa",
-    "wide": false,
-    "caption": "Turmas interagindo em torno dos resultados dos prompts, compartilhando comandos testados para alimentar o catálogo da Prompioteca da escola."
-  },
-  {
-    "id": 14,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.49.jpeg",
-    "title": "Pesquisa Integrada: Plataforma Conecta + Gemini",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Pesquisa Digital",
-    "wide": false,
-    "caption": "Interseção prática entre a pesquisa bibliográfica na Plataforma Conecta e a sintetização inteligente de conceitos pelo modelo Gemini."
-  },
-  {
-    "id": 15,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.45.jpeg",
-    "title": "Mobilização na Entrada da Biblioteca Escolar",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Semana da Biblioteca",
-    "wide": true,
-    "caption": "Estudantes na entrada da biblioteca para participar das sessões simultâneas da Semana da Biblioteca e dinâmicas da Plataforma Conecta."
-  },
-  {
-    "id": 16,
-    "file": "WhatsApp Image 2026-10-27 at 15.58.46.jpeg",
-    "title": "Coordenação dos Desafios na Área Externa",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Desafios Conecta",
-    "wide": false,
-    "caption": "Ponto de apoio aos alunos com cartões de prompt e orientações para o acesso à biblioteca digital Conecta SENAI."
-  },
-  {
-    "id": 17,
-    "file": "WhatsApp Image 2026-10-27 at 14.43.51.jpeg",
-    "title": "Início da Jornada no Gemini AcademyLab",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Gemini AcademyLab",
-    "wide": true,
-    "caption": "Telão do auditório projetando o QR Code de acesso ao Gemini AcademyLab com transmissão simultânea das facilitadoras Alice Turibio e Roberta Freitas."
-  },
-  {
-    "id": 18,
     "file": "WhatsApp Image 2026-10-27 at 11.10.37.jpeg",
     "title": "Conexão Oficial: SENAI + Google for Education",
     "category": "auditorio",
     "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Google Gemini Lab",
+    "tag": "Destaque Institucional",
     "wide": true,
-    "caption": "Auditório do SENAI Morvan Figueiredo conectado com a cenografia Gemini Lab e a transmissão ao vivo de capacitação em IA."
+    "caption": "Auditório da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 em sintonia com a identidade visual do Gemini Lab, unindo o ensino profissionalizante às soluções educacionais Google."
   },
   {
-    "id": 19,
+    "id": 4,
     "file": "WhatsApp Image 2026-10-27 at 11.10.34.jpeg",
-    "title": "Atenção Total dos Estudantes na Palestra",
+    "title": "Energia e Protagonismo dos Estudantes",
     "category": "auditorio",
     "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Formação Técnica",
+    "tag": "Juventude em Ação",
     "wide": false,
-    "caption": "Estudantes dos cursos técnicos acompanhando atentamente as demonstrações práticas de IA generativa para a indústria."
+    "caption": "Estudantes compartilhando sorrisos e o orgulho de explorar de perto as tecnologias de inteligência artificial generativa."
   },
   {
-    "id": 20,
+    "id": 5,
     "file": "WhatsApp Image 2026-10-27 at 11.10.35.jpeg",
-    "title": "Engajamento no Auditório Escolar",
+    "title": "Entusiasmo e Integração Entre Turmas",
     "category": "auditorio",
     "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Auditório Conectado",
+    "tag": "Conexão Coletiva",
     "wide": false,
-    "caption": "Momento de debate e questionamentos dos alunos sobre os impactos da inteligência artificial nas carreiras industriais."
+    "caption": "Ambiente descontraído e participativo no auditório da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 durante a dinâmica do Google Day."
   },
   {
-    "id": 21,
-    "file": "WhatsApp Image 2026-10-27 at 14.43.52 (1).jpeg",
-    "title": "Participação Interativa via Smartphones",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Acesso Mobile",
-    "wide": false,
-    "caption": "Alunos escaneando os QR Codes das telas para testar os prompts do Google Gemini em seus próprios dispositivos móveis."
-  },
-  {
-    "id": 22,
-    "file": "WhatsApp Image 2026-10-27 at 14.43.52 (2).jpeg",
-    "title": "Pesquisa Interativa em Tempo Real",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Enquete ao Vivo",
-    "wide": false,
-    "caption": "Enquete interativa projetada no auditório mapeando o nível de familiaridade dos alunos com as ferramentas de IA."
-  },
-  {
-    "id": 23,
-    "file": "WhatsApp Image 2026-10-27 at 14.43.52 (3).jpeg",
-    "title": "Foco e Aprendizado na Formação",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Imersão Acadêmica",
+    "id": 6,
+    "file": "b1ef1a2d-6246-4c2c-b33d-382122c9452e.jpg",
+    "title": "Dinâmica da Roleta Interativa na Sala de Estudos",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Gamificação Pedagógica",
     "wide": true,
-    "caption": "Ambiente de imersão focado no auditório, com os alunos absorvendo boas práticas de formulação de comandos contextuais."
+    "caption": "Estudantes em mesas redondas na sala de estudos participando da dinâmica da roleta digital, sorteando categorias e desafios de IA em tempo real."
   },
   {
-    "id": 24,
-    "file": "WhatsApp Image 2026-10-27 at 14.43.52.jpeg",
-    "title": "Visão Ampla do Auditório da Escola",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Auditório Pleno",
+    "id": 7,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.50.jpeg",
+    "title": "Lançamento da Prompioteca SENAI",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Inovação Pedagógica",
+    "wide": false,
+    "caption": "Aluna apresenta a 'Prompioteca' da Escola SENAI \"Morvan Figueiredo\" CFP 1.03, catálogo de comandos e prompts formatados para estudo, projetos técnicos e pesquisa."
+  },
+  {
+    "id": 8,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.47 (1).jpeg",
+    "title": "Oficina de IA na Biblioteca: Engenharia de Prompts",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Oficina Aplicada",
     "wide": true,
-    "caption": "Auditório da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 (Rua do Oratório, 215) em sua capacidade máxima durante a transmissão do Google Day."
+    "caption": "Trabalho em equipes nas mesas redondas da biblioteca escolar: estudantes refinam comandos detalhados para geração de capas de livros e recursos visuais com IA."
   },
   {
-    "id": 25,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.38.jpeg",
-    "title": "Conceitos de IA Agêntica e Automação",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "IA Agêntica",
+    "id": 9,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.47.jpeg",
+    "title": "Visão Geral da Oficina de Prompts na Biblioteca",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Ambiente Colaborativo",
     "wide": false,
-    "caption": "Apresentação detalhada sobre sistemas autônomos e agentes inteligentes baseados em modelos avançados de linguagem."
+    "caption": "Sala de estudos repleta de alunos engajados na resolução prática dos desafios de comandos projetados no telão da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
   },
   {
-    "id": 26,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.38 (1).jpeg",
-    "title": "Os 4 Pilares da IA no Telão",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Fundamentos de IA",
+    "id": 10,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.48 (1).jpeg",
+    "title": "Trabalho em Equipe e Refinamento de Resultados",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Colaboração Ativa",
     "wide": false,
-    "caption": "Lâmina destacando aprendizado, raciocínio, resolução de problemas e criação de conteúdo como pilares pedagógicos da IA."
+    "caption": "Alunos analisando juntos as respostas geradas pelo assistente e debatendo sobre a clareza e estrutura dos parâmetros nos prompts."
   },
   {
-    "id": 27,
-    "file": "WhatsApp Image 2026-10-27 at 14.59.22.jpeg",
-    "title": "Interação Direta com Facilitadoras Google",
+    "id": 11,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.48.jpeg",
+    "title": "Alunas Protagonistas na Oficina de IA",
     "category": "auditorio",
     "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Google for Education",
-    "wide": true,
-    "caption": "Momento em que os alunos do Morvan Figueiredo puderam enviar perguntas e interagir ao vivo com as especialistas da Gemini Academy."
-  },
-  {
-    "id": 28,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.30.jpeg",
-    "title": "Estudante Conectado no Auditório",
-    "category": "auditorio",
-    "categoryLabel": "Auditório & Google Gemini",
-    "tag": "Engajamento Individual",
+    "tag": "Protagonismo Jovem",
     "wide": false,
-    "caption": "Estudante participando da atividade síncrona diretamente da poltrona do auditório escolar."
+    "caption": "Estudantes em frente ao painel da oficina de prompts, ressaltando a participação ativa e o talento feminino na área tecnológica."
   },
   {
-    "id": 29,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.31.jpeg",
-    "title": "Discussão em Grupo sobre Aplicações de IA",
+    "id": 12,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.46 (1).jpeg",
+    "title": "Desafio de Prompts com QR Code no Pátio",
     "category": "acao",
     "categoryLabel": "Estudantes em Ação",
-    "tag": "Colaboração em Grupo",
+    "tag": "Interação Prática",
     "wide": false,
-    "caption": "Alunos debatendo os prompts e discutindo como aplicar a inteligência artificial generativa em seus projetos técnicos de oficina."
+    "caption": "Alunos com camisetas do SENAI e agasalho da WorldSkills escaneando os cartões de prompt do Gemini Lab para acessar desafios em seus smartphones."
   },
   {
-    "id": 30,
+    "id": 13,
     "file": "WhatsApp Image 2026-10-27 at 11.10.31 (1).jpeg",
-    "title": "Resolução Coletiva de Desafios Práticos",
+    "title": "Tire uma Carta, Descubra um Prompt e Ganhe Brindes",
+    "category": "acao",
+    "categoryLabel": "Estudantes em Ação",
+    "tag": "Gamificação",
+    "wide": false,
+    "caption": "Estudantes concentrados na bancada interativa, retirando suas cartas e desvendando novas formas de interagir com o Google Gemini."
+  },
+  {
+    "id": 14,
+    "file": "WhatsApp Image 2026-10-27 at 11.10.31.jpeg",
+    "title": "Experimentação Prática na Palma da Mão",
     "category": "acao",
     "categoryLabel": "Estudantes em Ação",
     "tag": "Mão na Massa",
     "wide": false,
-    "caption": "Trabalho colaborativo para decifrar problemas práticos propostos durante as rodadas temáticas do Google Day."
+    "caption": "Com seus próprios celulares, os estudantes testam prompts em tempo real, explorando capacidade analítica, criatividade e síntese."
+  },
+  {
+    "id": 15,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.49 (1).jpeg",
+    "title": "Estudantes Premiados com Brindes Oficiais Gemini",
+    "category": "acao",
+    "categoryLabel": "Estudantes em Ação",
+    "tag": "Reconhecimento",
+    "wide": true,
+    "caption": "Grupo de alunos da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 comemora no pátio exibindo com satisfação as squeezes térmicas e kits do Google Gemini."
+  },
+  {
+    "id": 16,
+    "file": "WhatsApp Image 2026-10-27 at 15.58.49.jpeg",
+    "title": "Convivência e Descontração no Jardim da Escola",
+    "category": "acao",
+    "categoryLabel": "Estudantes em Ação",
+    "tag": "Vivência Escolar",
+    "wide": false,
+    "caption": "Alunas compartilhando a cartela de adesivos exclusivos do Gemini e a garrafa personalizada conquistada nas dinâmicas de raciocínio e prompts."
+  },
+  {
+    "id": 17,
+    "file": "WhatsApp Image 2026-10-27 at 11.10.32 (2).jpeg",
+    "title": "Panorama do Pátio e Fluxo de Participantes",
+    "category": "acao",
+    "categoryLabel": "Estudantes em Ação",
+    "tag": "Vista Panorâmica",
+    "wide": true,
+    "caption": "Visão ampla das áreas externas e jardins da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 com os estudantes movimentando as estações do Google Day."
+  },
+  {
+    "id": 18,
+    "file": "WhatsApp Image 2026-10-27 at 11.10.32 (1).jpeg",
+    "title": "Integração nos Espaços de Convivência",
+    "category": "acao",
+    "categoryLabel": "Estudantes em Ação",
+    "tag": "Convivência Escolar",
+    "wide": false,
+    "caption": "Circulação ativa e troca de ideias entre alunos nos corredores e passarelas após as sessões formativas."
+  },
+  {
+    "id": 19,
+    "file": "WhatsApp Image 2026-10-27 at 14.43.52 (1).jpeg",
+    "title": "Início da Jornada: Conexão via QR Code no Telão",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Interatividade Digital",
+    "wide": false,
+    "caption": "Estudantes no auditório com celulares a postos escaneando o código de início da jornada na plataforma Gemini Academy Lab."
+  },
+  {
+    "id": 20,
+    "file": "WhatsApp Image 2026-10-27 at 14.43.52 (2).jpeg",
+    "title": "Desafio Visual: Humana ou Gemini?",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Discernimento Crítico",
+    "wide": false,
+    "caption": "Atividade interativa desafiando a percepção dos estudantes na identificação de elementos fotorrealistas em retratos gerados por inteligência artificial."
+  },
+  {
+    "id": 21,
+    "file": "WhatsApp Image 2026-10-27 at 14.43.52 (3).jpeg",
+    "title": "Cultura e Realismo com Inteligência Artificial",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "IA Generativa",
+    "wide": false,
+    "caption": "Análise guiada sobre fotorrealismo, representatividade e detalhes na geração de imagens de povos originários com ferramentas generativas."
+  },
+  {
+    "id": 22,
+    "file": "WhatsApp Image 2026-10-27 at 14.43.52.jpeg",
+    "title": "Enquete de Nível de Experiência dos Alunos",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Pesquisa em Tempo Real",
+    "wide": false,
+    "caption": "Votação em tempo real no auditório sobre o nível de familiaridade dos estudantes com inteligência artificial e seu uso no cotidiano escolar."
+  },
+  {
+    "id": 23,
+    "file": "WhatsApp Image 2026-10-27 at 14.59.22.jpeg",
+    "title": "Debate Ético: Resumos por IA vs Leitura Crítica",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Ética e Responsabilidade",
+    "wide": false,
+    "caption": "Discussão orientada sobre o uso consciente da IA nos estudos: quando é produtivo resumir leituras e o papel insubstituível do pensamento autônomo."
+  },
+  {
+    "id": 24,
+    "file": "WhatsApp Image 2026-10-27 at 11.10.38 (1).jpeg",
+    "title": "Os 4 Pilares: O Que É Inteligência Artificial?",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Fundamentos de IA",
+    "wide": false,
+    "caption": "Apresentação formativa detalhando os quatro pilares estruturantes: Aprendizado, Raciocínio, Solução de Problemas e Criação."
+  },
+  {
+    "id": 25,
+    "file": "WhatsApp Image 2026-10-27 at 11.10.38.jpeg",
+    "title": "A Era da IA Agêntica e Autonomia Direcionada",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "IA Agêntica",
+    "wide": true,
+    "caption": "Explanação sobre o comportamento direcionado a objetivos e a operação autônoma dos novos agentes inteligentes no mercado profissional."
+  },
+  {
+    "id": 26,
+    "file": "WhatsApp Image 2026-10-27 at 11.12.24 (1).jpeg",
+    "title": "Facilitadoras Amplifica / Google for Education",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Gemini Academy",
+    "wide": false,
+    "caption": "Alice Turibio e Roberta Freitas, especialistas do Gemini Academy e parceiras do Google for Education, conduzindo a formação dos alunos."
+  },
+  {
+    "id": 27,
+    "file": "WhatsApp Image 2026-10-27 at 11.12.24.jpeg",
+    "title": "Boas Práticas e Diálogo com Especialistas",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Diálogo Educacional",
+    "wide": false,
+    "caption": "Orientações fundamentais para os alunos da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 sobre o uso seguro, ético e criativo das novas tecnologias."
+  },
+  {
+    "id": 28,
+    "file": "WhatsApp Image 2026-10-27 at 11.12.22.jpeg",
+    "title": "Votação Interativa da Turma",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Participação Coletiva",
+    "wide": false,
+    "caption": "Momento participativo no qual os alunos expressaram suas percepções sobre a curiosidade e o contato prévio com IA generativa."
+  },
+  {
+    "id": 29,
+    "file": "WhatsApp Image 2026-10-27 at 11.12.23 (1).jpeg",
+    "title": "Auditório em Plena Imersão",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Palestra Magna",
+    "wide": false,
+    "caption": "Plateia concentrada durante a apresentação dos palestrantes remotos com o palco iluminado pelas cores do Google Day."
+  },
+  {
+    "id": 30,
+    "file": "WhatsApp Image 2026-10-27 at 11.12.23 (2).jpeg",
+    "title": "Conforto e Infraestrutura de Ponta",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Estrutura SENAI",
+    "wide": false,
+    "caption": "Instalações modernas e climatizadas da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 proporcionando conforto e acústica para grandes eventos."
   },
   {
     "id": 31,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.32.jpeg",
-    "title": "Troca de Ideias Entre Alunos dos Cursos Regulares",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Comunidade Estudantil",
+    "file": "WhatsApp Image 2026-10-27 at 11.12.23.jpeg",
+    "title": "Estudantes Conectados com Seus Dispositivos",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Mundo Digital",
     "wide": false,
-    "caption": "Estudantes dos cursos regulares do SENAI Morvan Figueiredo interagindo e compartilhando suas soluções no auditório."
+    "caption": "Alunos com notebooks e dispositivos portáteis acompanhando a apresentação e participando ativamente dos exercícios."
   },
   {
     "id": 32,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.32 (1).jpeg",
-    "title": "Conexão dos Estudantes com Novas Tecnologias",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Protagonismo Jovem",
+    "file": "WhatsApp Image 2026-10-27 at 15.58.46.jpeg",
+    "title": "Preparação dos Kits e Brindes Gemini",
+    "category": "cenografia",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Organização",
     "wide": false,
-    "caption": "Jovens estudantes vivenciando na prática o poder das ferramentas cognitivas contemporâneas."
+    "caption": "Membros da equipe organizando as caixas de brindes e alinhando as garrafas pretas térmicas personalizadas para a premiação dos alunos."
   },
   {
     "id": 33,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.32 (2).jpeg",
-    "title": "Análise dos Resultados no Telão",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Análise Crítica",
-    "wide": true,
-    "caption": "Acompanhamento coletivo dos resultados gerados pelo modelo e reflexão sobre a precisão das respostas fornecidas pela IA."
+    "file": "WhatsApp Image 2026-10-27 at 11.10.32.jpeg",
+    "title": "Bancada Gamificada com Squeezes e Cartas",
+    "category": "cenografia",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Ponto de Interação",
+    "wide": false,
+    "caption": "Detalhe da estação de desafios 'Escolha uma carta e descubra seu prompt Gemini' montada para incentivar a curiosidade técnica."
   },
   {
     "id": 34,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.33.jpeg",
-    "title": "Exploração Prática nos Dispositivos Pessoais",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Tecnologia Acessível",
+    "file": "WhatsApp Image 2026-10-27 at 11.10.30 (1).jpeg",
+    "title": "Squeeze Térmica Oficial Google Gemini",
+    "category": "cenografia",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Brinde Institucional",
     "wide": false,
-    "caption": "Aluna experimentando fluxos de comandos de texto diretamente no celular durante a sessão prática."
+    "caption": "A garrafa preta fosca com a gravação 'Google Gemini', símbolo comemorativo distribuído aos estudantes participantes."
   },
   {
     "id": 35,
-    "file": "WhatsApp Image 2026-10-27 at 11.10.30 (1).jpeg",
-    "title": "Sincronização dos Exercícios em Tempo Real",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Prática Conectada",
+    "file": "WhatsApp Image 2026-10-27 at 11.10.30.jpeg",
+    "title": "Instrutor SENAI e Painel Modular Gemini Lab",
+    "category": "cenografia",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Espaço Cenográfico",
     "wide": false,
-    "caption": "Estudante concentrado nas etapas de resolução do formulário de IA agêntica."
+    "caption": "Educador do SENAI ao lado do painel modular com formas geométricas e cores Google, destacando o padrão institucional da escola."
   },
   {
     "id": 36,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.23 (1).jpeg",
-    "title": "Pausa e Convivência no Pátio Escolar",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Ambiente Escolar",
+    "file": "WhatsApp Image 2026-10-27 at 11.10.33.jpeg",
+    "title": "Equipe Docente e Coordenação do SENAI",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Corpo Docente",
     "wide": false,
-    "caption": "Estudantes no pátio arborizado da Escola SENAI \"Morvan Figueiredo\" durante o intervalo entre as sessões."
+    "caption": "Educadores da unidade celebrando a concretização da parceria e o entusiasmo contagiante de cada aluno participante."
   },
   {
     "id": 37,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.23 (2).jpeg",
-    "title": "Diálogo e Compartilhamento de Aprendizados",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Integração",
-    "wide": false,
-    "caption": "Grupos reunidos no pátio conversando sobre as descobertas das oficinas da manhã."
+    "file": "WhatsApp Image 2026-10-27 at 11.12.25 (1).jpeg",
+    "title": "Projeção de Abertura: Um Dia SENAI + Google de IA",
+    "category": "cenografia",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Abertura Oficial",
+    "wide": true,
+    "caption": "Projeção oficial em 27 de outubro de 2026: 'Inteligência artificial para apoiar sua aprendizagem' na Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
   },
   {
     "id": 38,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.24.jpeg",
-    "title": "Movimentação e Vitalidade no Campus Morvan Figueiredo",
-    "category": "acao",
-    "categoryLabel": "Estudantes em Ação",
-    "tag": "Campus Ativo",
-    "wide": true,
-    "caption": "A energia dos estudantes ocupando os espaços de convivência do SENAI Morvan Figueiredo durante o Google Day."
+    "file": "WhatsApp Image 2026-10-27 at 11.12.25 (2).jpeg",
+    "title": "Palco Principal do Gemini Lab Preparado",
+    "category": "cenografia",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Cenografia de Palco",
+    "wide": false,
+    "caption": "Cenário planejado com a estética Google for Education e a tradicional qualidade e estrutura técnica do SENAI."
   },
   {
     "id": 39,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.22.jpeg",
-    "title": "Cenografia Oficial: Painel Modular Google Gemini Lab",
+    "file": "WhatsApp Image 2026-10-27 at 11.12.25.jpeg",
+    "title": "Composição Modular com Cores Google",
     "category": "cenografia",
-    "categoryLabel": "Cenografia & Detalhes",
-    "tag": "Cenografia de Palco",
+    "categoryLabel": "Ambiente & Cenografia",
+    "tag": "Identidade Visual",
     "wide": false,
-    "caption": "Painel cenográfico modular com a estrela de quatro pontas e a paleta oficial Google Gemini montado no palco do auditório."
+    "caption": "Detalhe dos módulos estilizados com ícones representativos de educação, criatividade e tecnologia que acolheram a comunidade escolar."
   },
   {
     "id": 40,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.23.jpeg",
-    "title": "Elementos Visuais do Google Gemini Lab",
+    "file": "cartaz-oficial.jpg",
+    "title": "Cartaz Oficial: Um Dia SENAI + Google de IA",
     "category": "cenografia",
-    "categoryLabel": "Cenografia & Detalhes",
-    "tag": "Identidade Google",
-    "wide": false,
-    "caption": "Composição geométrica com os prismas coloridos representando a multimodalidade do modelo Gemini."
+    "categoryLabel": "Cenografia & Cartaz",
+    "tag": "Cartaz Oficial",
+    "wide": true,
+    "caption": "Cartaz oficial do evento \"Um Dia SENAI + Google de IA\" realizado em 27 de outubro de 2026 na Escola SENAI \"Morvan Figueiredo\" CFP 1.03 (Rua do Oratório, 215 - Mooca)."
   },
   {
     "id": 41,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.24 (1).jpeg",
-    "title": "Auditório e Símbolos Institucionais",
-    "category": "cenografia",
-    "categoryLabel": "Cenografia & Detalhes",
-    "tag": "Solenidade",
-    "wide": false,
-    "caption": "Púlpito de conferências e pavilhões nacional e do Estado de São Paulo no auditório da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
+    "file": "WhatsApp Image 2026-10-27 at 13.47.05.jpeg",
+    "title": "Palco e Abertura no Auditório",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Abertura Oficial",
+    "wide": true,
+    "caption": "Abertura oficial do Google Day no auditório com a cenografia Gemini Lab e acolhimento aos estudantes da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
   },
   {
     "id": 42,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.25.jpeg",
-    "title": "Preparação e Ambientação do Auditório",
-    "category": "cenografia",
-    "categoryLabel": "Cenografia & Detalhes",
-    "tag": "Infraestrutura",
-    "wide": true,
-    "caption": "Espaço do auditório preparado para receber as turmas com som, iluminação cênica e projeção em alta fidelidade."
+    "file": "WhatsApp Image 2026-10-27 at 14.43.51.jpeg",
+    "title": "Início da Jornada no Gemini AcademyLab",
+    "category": "auditorio",
+    "categoryLabel": "Auditório & Google Gemini",
+    "tag": "Transmissão Síncrona",
+    "wide": false,
+    "caption": "Telão do auditório projetando o QR Code de acesso ao Gemini AcademyLab com transmissão simultânea de capacitação em IA."
   },
   {
     "id": 43,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.25 (1).jpeg",
-    "title": "Iluminação e Acústica para a Transmissão",
-    "category": "cenografia",
-    "categoryLabel": "Cenografia & Detalhes",
-    "tag": "Tecnologia de Palco",
+    "file": "WhatsApp Image 2026-10-27 at 15.58.45 (1).jpeg",
+    "title": "Entrega de Premiação com Squeeze Térmica",
+    "category": "acao",
+    "categoryLabel": "Estudantes em Ação",
+    "tag": "Premiação Google",
     "wide": false,
-    "caption": "Apoio técnico e infraestrutura garantindo excelente qualidade audiovisual durante toda a programação do evento."
+    "caption": "Estudante premiado com squeeze térmica exclusiva após desvendar os desafios práticos de engenharia de prompts."
   },
   {
     "id": 44,
-    "file": "WhatsApp Image 2026-10-27 at 11.12.25 (2).jpeg",
-    "title": "Ambiente Acolhedor da Escola Morvan Figueiredo",
-    "category": "cenografia",
-    "categoryLabel": "Cenografia & Detalhes",
-    "tag": "Escola SENAI CFP 1.03",
+    "file": "WhatsApp Image 2026-10-27 at 15.58.45.jpeg",
+    "title": "Mobilização na Entrada da Biblioteca",
+    "category": "biblioteca",
+    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
+    "tag": "Semana da Biblioteca",
     "wide": false,
-    "caption": "Instalações arborizadas da unidade situada na Rua do Oratório, 215 - Mooca, palco desta memorável imersão em inteligência artificial."
+    "caption": "Estudantes na entrada da biblioteca para participar das oficinas simultâneas da Semana da Biblioteca e apresentação da Plataforma Conecta SENAI."
   }
 ];
 
@@ -597,7 +597,6 @@ function updateFilterCounts() {
   const counts = {
     todos: galleryData.length,
     biblioteca: galleryData.filter(i => i.category === 'biblioteca').length,
-    remoter: galleryData.filter(i => i.category === 'remoter').length,
     auditorio: galleryData.filter(i => i.category === 'auditorio').length,
     acao: galleryData.filter(i => i.category === 'acao').length,
     cenografia: galleryData.filter(i => i.category === 'cenografia').length
