@@ -466,7 +466,7 @@ const appState = {
 // Elementos do DOM
 const dom = {
   galleryGrid: document.getElementById('gallery-grid'),
-  filterButtons: document.querySelectorAll('.filter-btn'),
+  filterButtons: document.querySelectorAll('.filter-chip, .filter-btn'),
   themeToggle: document.getElementById('theme-toggle'),
   header: document.getElementById('header'),
   
@@ -485,7 +485,7 @@ const dom = {
   
   // Mobile Menu
   mobileMenuToggle: document.getElementById('mobile-menu-toggle'),
-  navLinks: document.querySelector('.nav-links')
+  navLinks: document.querySelector('.nav-menu, .nav-links')
 };
 
 // =============================================================================
@@ -757,7 +757,7 @@ function applyTheme(theme) {
 // =============================================================================
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links .nav-link');
+  const navLinks = document.querySelectorAll('.nav-tab, .nav-link');
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -816,7 +816,7 @@ function initEventListeners() {
     dom.lightbox.addEventListener('touchend', (e) => {
       appState.touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
-    }, { passive: true });
+    }}, { passive: true });
   }
 
   if (dom.mobileMenuToggle && dom.navLinks) {
@@ -824,7 +824,7 @@ function initEventListeners() {
       dom.navLinks.classList.toggle('mobile-open');
     });
 
-    dom.navLinks.querySelectorAll('.nav-link').forEach(link => {
+    dom.navLinks.querySelectorAll('.nav-tab, .nav-link').forEach(link => {
       link.addEventListener('click', () => {
         dom.navLinks.classList.remove('mobile-open');
       });
