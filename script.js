@@ -24,52 +24,52 @@ const galleryData = [
   {
     "id": 2,
     "file": "WhatsApp Image 2026-10-27 at 13.47.05.jpeg",
-    "title": "Abertura com o Docente Remoter SENAI",
+    "title": "Abertura com o Docente Gabriel Eduardo",
     "category": "remoter",
-    "categoryLabel": "Docente Remoter SENAI",
-    "tag": "Remoter SENAI em Ação",
+    "categoryLabel": "Docente Gabriel Eduardo",
+    "tag": "Docente Gabriel Eduardo",
     "wide": true,
-    "caption": "O Docente Remoter SENAI (com a camiseta preta oficial de facilitação e inovação digital) no palco do auditório conduzindo a abertura de 'Um Dia SENAI + Google de IA' para os estudantes da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
+    "caption": "O Docente Gabriel Eduardo no palco do auditório conduzindo a abertura oficial de 'Um Dia SENAI + Google de IA' para os estudantes da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
   },
   {
     "id": 3,
     "file": "aa73a3e2-a177-4841-a842-73d9a274e579.jpg",
-    "title": "Docente Remoter Conduzindo a Imersão",
+    "title": "Docente Gabriel Eduardo Conduzindo a Imersão",
     "category": "remoter",
-    "categoryLabel": "Docente Remoter SENAI",
+    "categoryLabel": "Docente Gabriel Eduardo",
     "tag": "Liderança Pedagógica",
     "wide": true,
-    "caption": "Visão de palco do Docente Remoter SENAI, responsável pela facilitação tecnológica e metodologias ativas, articulando os desafios do Google Gemini com a formação profissional dos alunos."
+    "caption": "Visão de palco do Docente Gabriel Eduardo, facilitador pedagógico do SENAI, articulando os desafios práticos do Google Gemini com a formação profissional dos alunos."
   },
   {
     "id": 4,
     "file": "WhatsApp Image 2026-10-27 at 15.58.45 (1).jpeg",
-    "title": "Docente Remoter e Equipe: Entrega de Prêmios",
+    "title": "Docente Gabriel Eduardo e Equipe: Entrega de Prêmios",
     "category": "remoter",
-    "categoryLabel": "Docente Remoter SENAI",
+    "categoryLabel": "Docente Gabriel Eduardo",
     "tag": "Premiação & Squeezes",
     "wide": false,
-    "caption": "Registro especial com o Docente Remoter SENAI (polo preta com a insígnia Remoter), equipe organizadora e estudante premiado com squeeze térmica exclusiva após desvendar os desafios de engenharia de prompts."
+    "caption": "Registro especial com o Docente Gabriel Eduardo, equipe organizadora e estudante premiado com squeeze térmica exclusiva após desvendar os desafios de engenharia de prompts."
   },
   {
     "id": 5,
     "file": "WhatsApp Image 2026-10-27 at 15.58.46 (1).jpeg",
-    "title": "Docente Remoter na Dinâmica de Cartões de Prompt",
+    "title": "Docente Gabriel Eduardo na Dinâmica de Cartões",
     "category": "remoter",
-    "categoryLabel": "Docente Remoter SENAI",
+    "categoryLabel": "Docente Gabriel Eduardo",
     "tag": "Engenharia de Prompts",
     "wide": false,
-    "caption": "O Docente Remoter SENAI com a equipe no pátio da escola coordenando a entrega e validação dos cartões de prompt sorteados durante o evento."
+    "caption": "O Docente Gabriel Eduardo com a equipe no pátio da escola coordenando a entrega e validação dos cartões de prompt sorteados durante o evento."
   },
   {
     "id": 6,
     "file": "WhatsApp Image 2026-10-27 at 15.45.56.jpeg",
     "title": "Comunidade Acadêmica e Docentes em Celebração",
     "category": "remoter",
-    "categoryLabel": "Docente Remoter SENAI",
+    "categoryLabel": "Docente Gabriel Eduardo",
     "tag": "Celebração Geral",
     "wide": true,
-    "caption": "Docentes, facilitadores Remoter e turmas da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 reunidos no auditório ao final da jornada de inteligência artificial comemorando o aprendizado conjunto."
+    "caption": "Docentes, facilitador Gabriel Eduardo e turmas da Escola SENAI \"Morvan Figueiredo\" CFP 1.03 reunidos no auditório ao final da jornada de inteligência artificial comemorando o aprendizado conjunto."
   },
   {
     "id": 7,
@@ -97,9 +97,9 @@ const galleryData = [
     "title": "Workshop da Plataforma Conecta (Biblioteca Digital)",
     "category": "biblioteca",
     "categoryLabel": "Semana da Biblioteca & Conecta",
-    "tag": "Plataforma Conecta SP",
+    "tag": "Plataforma Conecta SENAI",
     "wide": false,
-    "caption": "Apresentação da Plataforma Conecta — a biblioteca digital oficial do SENAI-SP que dá acesso a milhares de livros e periódicos técnicos —, tema central do workshop literário e digital da Semana da Biblioteca."
+    "caption": "Apresentação da Plataforma Conecta SENAI — a biblioteca digital oficial que dá acesso a milhares de livros e periódicos técnicos —, tema central do workshop literário e digital da Semana da Biblioteca."
   },
   {
     "id": 10,
@@ -169,7 +169,7 @@ const galleryData = [
     "categoryLabel": "Semana da Biblioteca & Conecta",
     "tag": "Desafios Conecta",
     "wide": false,
-    "caption": "Ponto de apoio aos alunos com cartões de prompt e orientações para o acesso à biblioteca digital Conecta SP."
+    "caption": "Ponto de apoio aos alunos com cartões de prompt e orientações para o acesso à biblioteca digital Conecta SENAI."
   },
   {
     "id": 17,
@@ -522,9 +522,6 @@ function renderGallery(items) {
     card.setAttribute('aria-label', `${item.title} - Clique para ampliar`);
 
     const encodedFile = encodeURIComponent(item.file);
-    const badgeRemoterHtml = item.category === 'remoter' 
-      ? '<span class="remoter-badge-pill">★ Remoter SENAI</span>' 
-      : '';
 
     card.innerHTML = `
       <div class="card-thumb-container">
@@ -549,7 +546,6 @@ function renderGallery(items) {
           <span class="photo-category-pill cat-${item.category}">
             ${item.tag || item.categoryLabel}
           </span>
-          ${badgeRemoterHtml}
         </div>
       </div>
       <div class="card-content">
@@ -816,7 +812,7 @@ function initEventListeners() {
     dom.lightbox.addEventListener('touchend', (e) => {
       appState.touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
-    }}, { passive: true });
+    }, { passive: true });
   }
 
   if (dom.mobileMenuToggle && dom.navLinks) {

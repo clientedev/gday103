@@ -494,7 +494,9 @@ button {
   font-weight: 600;
 }
 
-/* Showcase Visual à Direita */
+/* ==========================================================================
+   SHOWCASE VISUAL À DIREITA (CLEAN GOOGLE STYLE - 2 CARDS OFICIAIS)
+   ========================================================================== */
 .hero-media-showcase {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -508,25 +510,34 @@ button {
   overflow: hidden;
   border: 1px solid var(--border-medium);
   box-shadow: var(--shadow-md);
-  background: var(--bg-surface);
+  background: #0D0E12;
   transition: transform 0.25s var(--ease-google), box-shadow 0.25s var(--ease-google);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
 }
 
 .showcase-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--g-blue);
 }
 
 .showcase-poster img {
   width: 100%;
-  height: 360px;
-  object-fit: cover;
+  height: 380px;
+  object-fit: contain; /* Não corta o cartaz de forma alguma! */
+  background: radial-gradient(circle at center, rgba(66, 133, 244, 0.12) 0%, rgba(15, 17, 23, 0.98) 100%);
+  display: block;
 }
 
 .showcase-stage img {
   width: 100%;
-  height: 360px;
-  object-fit: cover;
+  height: 380px;
+  object-fit: contain; /* Não corta a foto de forma alguma! */
+  background: #090B10;
+  display: block;
 }
 
 .showcase-badge {
@@ -534,20 +545,17 @@ button {
   bottom: 12px;
   left: 12px;
   right: 12px;
-  background: rgba(32, 33, 36, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(17, 19, 24, 0.90);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #FFFFFF;
-  padding: 6px 10px;
+  padding: 8px 12px;
   border-radius: var(--radius-sm);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-align: center;
-}
-
-.badge-remoter {
-  background: rgba(17, 19, 24, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 /* ==========================================================================
@@ -673,13 +681,20 @@ button {
 .card-thumb-container {
   position: relative;
   width: 100%;
-  padding-top: 66%;
+  height: 290px;
   overflow: hidden;
-  background: var(--bg-surface-hover);
+  background: #0E1015;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="light"] .card-thumb-container {
+  background: #F1F3F4;
 }
 
 .photo-card.card-wide .card-thumb-container {
-  padding-top: 50%;
+  height: 380px;
 }
 
 .card-thumb-container img {
@@ -688,12 +703,12 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.45s var(--ease-google);
+  object-fit: contain; /* NUNCA CORTA NENHUMA FOTO: 100% VISÍVEL NA ÍNTEGRA */
+  transition: transform 0.35s var(--ease-google);
 }
 
 .photo-card:hover .card-thumb-container img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .card-overlay {
@@ -1329,23 +1344,43 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.senai-logo-img {
+  height: 38px;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .brand-divider {
   width: 1px;
-  height: 24px;
+  height: 32px;
   background-color: var(--border-medium);
 }
 
 .google-brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-primary);
+  background: var(--bg-surface);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
 }
 
 .gemini-spark {
@@ -1378,6 +1413,18 @@ button {
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+.footer-credits img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* ==========================================================================
@@ -1622,7 +1669,8 @@ button {
   }
   .showcase-poster img,
   .showcase-stage img {
-    height: 280px;
+    height: 300px;
+    object-fit: contain;
   }
   .biblioteca-hero-box {
     padding: 24px 18px;
