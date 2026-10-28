@@ -881,7 +881,7 @@ function initRelatorioHandlers() {
     }
 
     const opt = {
-      margin: [0, 0, 0, 0],
+      margin: 0,
       filename: 'Relatorio_Google_Day_SENAI_Morvan_Figueiredo_27Out2026.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: {
@@ -889,6 +889,8 @@ function initRelatorioHandlers() {
         useCORS: true,
         logging: false,
         letterRendering: true,
+        scrollX: 0,
+        scrollY: 0,
         windowWidth: 794
       },
       jsPDF: {

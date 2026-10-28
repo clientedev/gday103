@@ -1873,6 +1873,17 @@ button {
   z-index: -9999;
 }
 
+/* Garante que o html2canvas não renderize tela transparente ao gerar o PDF */
+.html2pdf__overlay {
+  opacity: 1 !important;
+  background: transparent !important;
+  pointer-events: none !important;
+}
+
+.html2pdf__container {
+  background: #FFFFFF !important;
+}
+
 .relatorio-actions-row {
   display: flex;
   align-items: center;
