@@ -1718,4 +1718,795 @@ button {
   .btn-secondary-hero {
     justify-content: center;
   }
+  .relatorio-card {
+    padding: 32px 20px;
+  }
+  .relatorio-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .relatorio-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-primary-relatorio,
+  .btn-secondary-relatorio {
+    justify-content: center;
+  }
+  .pdf-proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   SEÇÃO RELATÓRIO DO DIA (DOWNLOAD EM PDF)
+   ========================================================================== */
+.section-relatorio {
+  padding: 80px 0;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.relatorio-card-wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.relatorio-card-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.4), rgba(234, 67, 53, 0.3), rgba(251, 188, 4, 0.3), rgba(52, 168, 83, 0.4));
+  border-radius: calc(var(--radius-xl) + 2px);
+  filter: blur(12px);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.relatorio-card {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-page);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 48px 44px;
+  box-shadow: var(--shadow-lg);
+}
+
+.relatorio-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.relatorio-pill-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(26, 115, 232, 0.12);
+  color: var(--g-blue);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border: 1px solid rgba(26, 115, 232, 0.25);
+}
+
+.relatorio-pill-date {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.relatorio-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.relatorio-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+.relatorio-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.relatorio-feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.feat-icon-bullet {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.86rem;
+  flex-shrink: 0;
+}
+
+.feat-icon-bullet.blue { background: var(--g-blue-soft); color: var(--g-blue); }
+.feat-icon-bullet.green { background: var(--g-green-soft); color: var(--g-green); }
+.feat-icon-bullet.yellow { background: var(--g-yellow-soft); color: var(--g-yellow-hover); }
+.feat-icon-bullet.red { background: var(--g-red-soft); color: var(--g-red); }
+
+.relatorio-feat-item .feat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.relatorio-feat-item strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.relatorio-feat-item span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.relatorio-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-relatorio {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--senai-red);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(227, 6, 19, 0.35);
+  transition: all 0.2s var(--ease-google);
+}
+
+.btn-primary-relatorio:hover {
+  background: var(--senai-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 6, 19, 0.45);
+}
+
+.btn-secondary-relatorio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-google);
+}
+
+.btn-secondary-relatorio:hover {
+  border-color: var(--g-blue);
+  color: var(--g-blue);
+  background: var(--bg-surface-hover);
+}
+
+.relatorio-author-stamp {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.stamp-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1A73E8, #4285F4);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
+}
+
+.stamp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stamp-role-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-tertiary);
+}
+
+.stamp-person-name {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.stamp-person-name strong {
+  color: var(--g-blue);
+  font-weight: 800;
+}
+
+.stamp-unit-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   MODAL DE VISUALIZAÇÃO DO RELATÓRIO OFICIAL (PADRÃO A4)
+   ========================================================================== */
+.relatorio-preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 17, 23, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1100;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s var(--ease-google);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.relatorio-preview-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.relatorio-preview-box {
+  width: 100%;
+  max-width: 900px;
+  height: 94vh;
+  background: #111318;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.relatorio-modal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #1A1D24;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.modal-topbar-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.modal-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-modal-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-modal-action.primary {
+  background: var(--senai-red);
+  color: #FFFFFF;
+}
+
+.btn-modal-action.primary:hover {
+  background: var(--senai-red-hover);
+}
+
+.btn-modal-action.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-modal-action.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-modal-close {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #9AA0A6;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.relatorio-preview-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px 20px;
+  background: #0B0D11;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   DOCUMENTO PADRÃO A4 PARA RELATÓRIO OFICIAL (3 PÁGINAS)
+   ========================================================================== */
+.pdf-document {
+  width: 210mm;
+  min-width: 210mm;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.pdf-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 16mm 18mm;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  page-break-after: always;
+  border-bottom: 2px dashed #E0E0E0;
+}
+
+.pdf-page:last-child {
+  border-bottom: none;
+  page-break-after: auto;
+}
+
+.pdf-inst-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 14px;
+}
+
+.pdf-header-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-logo-senai {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.pdf-header-divider {
+  width: 1px;
+  height: 32px;
+  background: #DADCE0;
+}
+
+.pdf-google-collab {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pdf-google-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #5F6368;
+  letter-spacing: 0.5px;
+}
+
+.pdf-google-name {
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: #1A73E8;
+}
+
+.pdf-inst-address {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.7rem;
+  color: #5F6368;
+}
+
+.pdf-inst-address strong {
+  font-size: 0.76rem;
+  color: #202124;
+}
+
+.pdf-color-rule {
+  display: flex;
+  height: 3px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pdf-color-rule span { flex: 1; }
+.pdf-color-rule .bar-b { background: #4285F4; }
+.pdf-color-rule .bar-r { background: #EA4335; }
+.pdf-color-rule .bar-y { background: #FBBC04; }
+.pdf-color-rule .bar-g { background: #34A853; }
+
+.pdf-title-block {
+  text-align: center;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  background: #F8F9FA;
+  border: 1px solid #E8EAED;
+  border-radius: 6px;
+}
+
+.pdf-doc-type {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #E30613;
+  margin-bottom: 4px;
+}
+
+.pdf-main-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #202124;
+  margin: 0 0 4px;
+  letter-spacing: -0.2px;
+}
+
+.pdf-subtitle {
+  font-size: 0.78rem;
+  color: #5F6368;
+  font-weight: 600;
+}
+
+.pdf-section {
+  margin-bottom: 14px;
+}
+
+.pdf-sec-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #1A73E8;
+  border-bottom: 1.5px solid #1A73E8;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
+
+.pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.74rem;
+  margin-bottom: 6px;
+}
+
+.pdf-table td,
+.pdf-table th {
+  padding: 5px 8px;
+  border: 1px solid #DADCE0;
+  vertical-align: middle;
+}
+
+.pdf-table .td-label {
+  background: #F8F9FA;
+  font-weight: 700;
+  color: #3C4043;
+  width: 22%;
+}
+
+.pdf-table .td-val {
+  color: #202124;
+  width: 28%;
+}
+
+.pdf-table-metrics th {
+  background: #E8F0FE;
+  color: #1A73E8;
+  font-weight: 800;
+  text-align: left;
+  font-size: 0.74rem;
+}
+
+.pdf-table-metrics .td-highlight {
+  font-weight: 800;
+  color: #E30613;
+  white-space: nowrap;
+}
+
+.pdf-callout {
+  background: #F8F9FA;
+  border-left: 4px solid #1A73E8;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: #3C4043;
+}
+
+.pdf-callout p { margin: 0; }
+
+.pdf-callout-success {
+  background: #F6FCF7;
+  border-left: 4px solid #34A853;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: #1E8E3E;
+}
+
+.pdf-callout-success p { margin: 0; }
+
+.pdf-list-bullets {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.74rem;
+  line-height: 1.55;
+  color: #3C4043;
+}
+
+.pdf-list-bullets li {
+  margin-bottom: 5px;
+}
+
+.pdf-page-mini-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #DADCE0;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 0.7rem;
+  color: #5F6368;
+}
+
+.pdf-mini-logo {
+  height: 20px;
+  width: auto;
+}
+
+.pdf-mini-title {
+  font-weight: 700;
+  color: #202124;
+}
+
+.pdf-mini-unit {
+  font-weight: 800;
+  color: #E30613;
+}
+
+.pdf-axis-block {
+  margin-bottom: 10px;
+}
+
+.pdf-axis-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #202124;
+  margin: 0 0 4px;
+}
+
+.pdf-axis-block p {
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: #3C4043;
+  margin: 0 0 4px;
+}
+
+.pdf-sublist {
+  margin: 0;
+  padding-left: 14px;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: #3C4043;
+}
+
+.pdf-sublist li {
+  margin-bottom: 4px;
+}
+
+.pdf-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pdf-proof-item {
+  border: 1px solid #DADCE0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #FAFAFA;
+}
+
+.proof-img-wrap {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background: #0D0E12;
+}
+
+.proof-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.proof-caption {
+  display: block;
+  padding: 4px 6px;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  color: #5F6368;
+}
+
+.pdf-signature-section {
+  margin-top: 14px;
+}
+
+.pdf-sign-citydate {
+  font-size: 0.74rem;
+  color: #5F6368;
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+.pdf-signature-box {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.signature-line {
+  width: 100%;
+  height: 1px;
+  background: #202124;
+  margin-bottom: 6px;
+}
+
+.signature-name {
+  font-size: 0.88rem;
+  color: #202124;
+}
+
+.signature-name strong {
+  font-weight: 800;
+  color: #1A73E8;
+}
+
+.signature-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #3C4043;
+  margin-top: 2px;
+}
+
+.signature-unit,
+.signature-dept {
+  font-size: 0.68rem;
+  color: #5F6368;
+  margin-top: 1px;
+}
+
+.pdf-page-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #E8EAED;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #80868B;
+}
+
+/* Regras de Impressão Nativa (window.print) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #relatorio-documento-pdf,
+  #relatorio-documento-pdf * {
+    visibility: visible;
+  }
+  #relatorio-documento-pdf {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+  }
+  .pdf-page {
+    border-bottom: none !important;
+    page-break-after: always !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    padding: 12mm 15mm !important;
+  }
 }

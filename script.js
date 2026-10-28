@@ -129,7 +129,7 @@ const galleryData = [
     "categoryLabel": "Estudantes em Ação",
     "tag": "Interação Prática",
     "wide": false,
-    "caption": "Alunos com camisetas do SENAI e agasalho da WorldSkills escaneando os cartões de prompt do Gemini Lab para acessar desafios em seus smartphones."
+    "caption": "Alunos escaneando cartões com QR Code do Google Gemini Lab nos smartphones para participar dos desafios práticos de inteligência artificial."
   },
   {
     "id": 13,
@@ -825,6 +825,8 @@ function initEventListeners() {
       });
     });
   }
+
+  initRelatorioHandlers();
 }
 
 function handleSwipe() {
@@ -838,6 +840,122 @@ function handleSwipe() {
       showNextImage();
     }
   }
+}
+
+// =============================================================================
+// GERAÇÃO E DOWNLOAD DO RELATÓRIO DO DIA EM PDF
+// =============================================================================
+function initRelatorioHandlers() {
+  const btnDownload = document.getElementById('btn-download-pdf');
+  const btnPrint = document.getElementById('btn-print-relatorio');
+  const modal = document.getElementById('relatorio-preview-modal');
+  const modalBtnDownload = document.getElementById('modal-btn-download');
+  const modalBtnPrint = document.getElementById('modal-btn-print');
+  const modalBtnClose = document.getElementById('modal-btn-close');
+  const pdfDoc = document.getElementById('relatorio-documento-pdf');
+
+  function baixarPDF(triggerBtn) {
+    if (!pdfDoc) return;
+    if (typeof html2pdf === 'undefined') {
+      window.print();
+      return;
+    }
+
+    const originalHtml = triggerBtn ? triggerBtn.innerHTML : '';
+    if (triggerBtn) {
+      triggerBtn.disabled = true;
+      triggerBtn.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite;">
+          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10"></path>
+        </svg>
+        <span>Gerando PDF Oficial...</span>
+      `;
+    }
+
+    const opt = {
+      margin: [6, 6, 6, 6],
+      filename: 'Relatorio_Google_Day_SENAI_Morvan_Figueiredo_27Out2026.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        letterRendering: true
+      },
+      jsPDF: {
+        unit: 'mm',
+        format: 'a4',
+        orientation: 'portrait'
+      },
+      pagebreak: { mode: ['css', 'legacy'] }
+    };
+
+    html2pdf()
+      .set(opt)
+      .from(pdfDoc)
+      .save()
+      .then(() => {
+        if (triggerBtn) {
+          triggerBtn.disabled = false;
+          triggerBtn.innerHTML = originalHtml;
+        }
+      })
+      .catch((err) => {
+        console.error('Erro na geração do PDF:', err);
+        if (triggerBtn) {
+          triggerBtn.disabled = false;
+          triggerBtn.innerHTML = originalHtml;
+        }
+        window.print();
+      });
+  }
+
+  function abrirModal() {
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function fecharModal() {
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (btnDownload) {
+    btnDownload.addEventListener('click', () => baixarPDF(btnDownload));
+  }
+
+  if (btnPrint) {
+    btnPrint.addEventListener('click', abrirModal);
+  }
+
+  if (modalBtnDownload) {
+    modalBtnDownload.addEventListener('click', () => baixarPDF(modalBtnDownload));
+  }
+
+  if (modalBtnPrint) {
+    modalBtnPrint.addEventListener('click', () => window.print());
+  }
+
+  if (modalBtnClose) {
+    modalBtnClose.addEventListener('click', fecharModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) fecharModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+      fecharModal();
+    }
+  });
 }
 
 // =============================================================================
