@@ -861,6 +861,13 @@ function initRelatorioHandlers() {
       return;
     }
 
+    const renderContainer = document.getElementById('pdf-render-container');
+    if (renderContainer) {
+      renderContainer.style.left = '0';
+      renderContainer.style.top = '0';
+      renderContainer.style.zIndex = '-99999';
+    }
+
     const originalHtml = triggerBtn ? triggerBtn.innerHTML : '';
     if (triggerBtn) {
       triggerBtn.disabled = true;
@@ -874,14 +881,15 @@ function initRelatorioHandlers() {
     }
 
     const opt = {
-      margin: [6, 6, 6, 6],
+      margin: [0, 0, 0, 0],
       filename: 'Relatorio_Google_Day_SENAI_Morvan_Figueiredo_27Out2026.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: {
         scale: 2,
         useCORS: true,
         logging: false,
-        letterRendering: true
+        letterRendering: true,
+        windowWidth: 794
       },
       jsPDF: {
         unit: 'mm',
@@ -896,6 +904,7 @@ function initRelatorioHandlers() {
       .from(pdfDoc)
       .save()
       .then(() => {
+        if (renderContainer) renderContainer.style.left = '-9999px';
         if (triggerBtn) {
           triggerBtn.disabled = false;
           triggerBtn.innerHTML = originalHtml;
@@ -903,6 +912,7 @@ function initRelatorioHandlers() {
       })
       .catch((err) => {
         console.error('Erro na geração do PDF:', err);
+        if (renderContainer) renderContainer.style.left = '-9999px';
         if (triggerBtn) {
           triggerBtn.disabled = false;
           triggerBtn.innerHTML = originalHtml;
@@ -912,7 +922,12 @@ function initRelatorioHandlers() {
   }
 
   function abrirModal() {
-    if (modal) {
+    if (modal && pdfDoc) {
+      const slot = document.getElementById('modal-preview-slot');
+      if (slot) {
+        slot.innerHTML = '';
+        slot.appendChild(pdfDoc.cloneNode(true));
+      }
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
