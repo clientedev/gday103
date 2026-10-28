@@ -444,12 +444,12 @@ const galleryData = [
   {
     "id": 44,
     "file": "WhatsApp Image 2026-10-27 at 15.58.45.jpeg",
-    "title": "Mobilização na Entrada da Biblioteca",
-    "category": "biblioteca",
-    "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
-    "tag": "Semana da Biblioteca",
+    "title": "Mobilização na Dinâmica de Brindes no Refeitório",
+    "category": "cenografia",
+    "categoryLabel": "Cenografia, Brindes & Bastidores",
+    "tag": "Dinâmica no Refeitório",
     "wide": false,
-    "caption": "Estudantes na entrada da biblioteca para participar das oficinas simultâneas da Semana da Biblioteca e apresentação da Plataforma Conecta SENAI."
+    "caption": "Mobilização e entusiasmo dos estudantes reunidos no refeitório da escola durante a dinâmica e entrega de brindes oficiais Google Gemini."
   }
 ];
 
@@ -854,7 +854,7 @@ function initRelatorioHandlers() {
   const modalBtnClose = document.getElementById('modal-btn-close');
   const pdfDoc = document.getElementById('relatorio-documento-pdf');
 
-  function baixarPDF(triggerBtn) {
+  async function baixarPDF(triggerBtn) {
     if (!pdfDoc) return;
     if (typeof html2pdf === 'undefined') {
       window.print();
@@ -880,53 +880,45 @@ function initRelatorioHandlers() {
       `;
     }
 
-    const opt = {
-      margin: [0, 0, 0, 0],
-      filename: 'Relatorio_Google_Day_SENAI_Morvan_Figueiredo_27Out2026.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        letterRendering: true,
-        scrollX: 0,
-        scrollY: 0
-      },
-      jsPDF: {
-        unit: 'mm',
-        format: 'a4',
-        orientation: 'portrait'
-      },
-      pagebreak: { mode: [] }
-    };
+    try {
+      const container = renderContainer || pdfDoc;
+      const pages = container.querySelectorAll('.pdf-page');
 
-    html2pdf()
-      .set(opt)
-      .from(pdfDoc)
-      .toPdf()
-      .get('pdf')
-      .then((pdf) => {
-        while (pdf.internal.getNumberOfPages() > 3) {
-          pdf.deletePage(pdf.internal.getNumberOfPages());
-        }
-      })
-      .save()
-      .then(() => {
-        if (renderContainer) renderContainer.style.left = '-9999px';
-        if (triggerBtn) {
-          triggerBtn.disabled = false;
-          triggerBtn.innerHTML = originalHtml;
-        }
-      })
-      .catch((err) => {
-        console.error('Erro na geração do PDF:', err);
-        if (renderContainer) renderContainer.style.left = '-9999px';
-        if (triggerBtn) {
-          triggerBtn.disabled = false;
-          triggerBtn.innerHTML = originalHtml;
-        }
-        window.print();
+      // Inicializa o jsPDF A4 padrão (210mm x 297mm)
+      const baseWorker = html2pdf().set({
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
       });
+      const pdf = await baseWorker.toPdf().get('pdf');
+
+      // Renderiza página por página individualmente para evitar cortes no meio ou páginas em branco
+      for (let i = 0; i < pages.length; i++) {
+        const pageEl = pages[i];
+        const canvas = await html2pdf()
+          .set({
+            html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0 }
+          })
+          .from(pageEl)
+          .toCanvas()
+          .get('canvas');
+
+        const imgData = canvas.toDataURL('image/jpeg', 0.98);
+        if (i > 0) {
+          pdf.addPage('a4', 'portrait');
+        }
+        pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+      }
+
+      pdf.save('Relatorio_Google_Day_SENAI_Morvan_Figueiredo_27Out2026.pdf');
+    } catch (err) {
+      console.error('Erro na geração do PDF:', err);
+      window.print();
+    } finally {
+      if (renderContainer) renderContainer.style.left = '-9999px';
+      if (triggerBtn) {
+        triggerBtn.disabled = false;
+        triggerBtn.innerHTML = originalHtml;
+      }
+    }
   }
 
   function abrirModal() {
