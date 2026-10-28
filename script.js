@@ -64,12 +64,12 @@ const galleryData = [
   {
     "id": 6,
     "file": "b1ef1a2d-6246-4c2c-b33d-382122c9452e.jpg",
-    "title": "Dinâmica da Roleta Interativa na Sala de Estudos",
+    "title": "Dinâmica da Roleta Interativa na Biblioteca",
     "category": "biblioteca",
     "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
     "tag": "Gamificação Pedagógica",
     "wide": true,
-    "caption": "Estudantes em mesas redondas na sala de estudos participando da dinâmica da roleta digital, sorteando categorias e desafios de IA em tempo real."
+    "caption": "Estudantes em mesas redondas na biblioteca escolar participando da dinâmica da roleta digital, sorteando categorias e desafios de IA em tempo real."
   },
   {
     "id": 7,
@@ -99,7 +99,7 @@ const galleryData = [
     "categoryLabel": "Semana da Biblioteca & Conecta SENAI",
     "tag": "Ambiente Colaborativo",
     "wide": false,
-    "caption": "Sala de estudos repleta de alunos engajados na resolução prática dos desafios de comandos projetados no telão da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
+    "caption": "Biblioteca escolar repleta de alunos engajados na resolução prática dos desafios de comandos projetados no telão da Escola SENAI \"Morvan Figueiredo\" CFP 1.03."
   },
   {
     "id": 10,

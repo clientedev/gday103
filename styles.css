@@ -495,14 +495,15 @@ button {
 }
 
 /* ==========================================================================
-   SHOWCASE VISUAL À DIREITA (CLEAN GOOGLE STYLE - 2 CARDS OFICIAIS)
+   SHOWCASE VISUAL À DIREITA (CARTAZ PREENCHENDO O CARD + FOTOS OFICIAIS)
    ========================================================================== */
 .hero-media-showcase {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr 1.05fr;
   gap: 16px;
   position: relative;
   align-items: stretch;
+  height: 420px;
 }
 
 .showcase-card {
@@ -511,9 +512,8 @@ button {
   overflow: hidden;
   border: 1px solid var(--border-medium);
   box-shadow: var(--shadow-md);
-  background: #0D0E12;
+  background: #080A0F;
   transition: transform 0.25s var(--ease-google), box-shadow 0.25s var(--ease-google);
-  height: 380px;
 }
 
 .showcase-card:hover {
@@ -523,57 +523,65 @@ button {
 }
 
 .showcase-poster {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #080A0F;
+  height: 100%;
 }
 
 .showcase-poster img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Não corta o cartaz oficial de forma alguma */
-  background: radial-gradient(circle at center, rgba(66, 133, 244, 0.12) 0%, rgba(15, 17, 23, 0.98) 100%);
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  padding: 6px;
 }
 
-.showcase-stage {
+.showcase-subgroup {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #090B10;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
 }
 
-.showcase-stage img {
+.showcase-stage,
+.showcase-prizes {
+  flex: 1;
+  height: calc(50% - 7px);
+}
+
+.showcase-stage img,
+.showcase-prizes img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Preenche a largura inteira dando destaque enorme à foto deitada */
+  object-fit: cover;
   object-position: center 30%;
   display: block;
   transition: transform 0.4s var(--ease-google);
 }
 
-.showcase-stage:hover img {
-  transform: scale(1.03);
+.showcase-stage:hover img,
+.showcase-prizes:hover img {
+  transform: scale(1.04);
 }
 
 .showcase-badge {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
   background: rgba(17, 19, 24, 0.90);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: #FFFFFF;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
 }
 
 /* ==========================================================================
@@ -1684,11 +1692,17 @@ button {
   }
   .hero-media-showcase {
     grid-template-columns: 1fr;
+    height: auto;
   }
-  .showcase-poster img,
-  .showcase-stage img {
-    height: 300px;
-    object-fit: contain;
+  .showcase-poster {
+    height: 380px;
+  }
+  .showcase-subgroup {
+    height: auto;
+  }
+  .showcase-stage,
+  .showcase-prizes {
+    height: 220px;
   }
   .biblioteca-hero-box {
     padding: 24px 18px;
