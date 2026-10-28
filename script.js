@@ -881,7 +881,7 @@ function initRelatorioHandlers() {
     }
 
     const opt = {
-      margin: 0,
+      margin: [0, 0, 0, 0],
       filename: 'Relatorio_Google_Day_SENAI_Morvan_Figueiredo_27Out2026.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: {
@@ -890,20 +890,26 @@ function initRelatorioHandlers() {
         logging: false,
         letterRendering: true,
         scrollX: 0,
-        scrollY: 0,
-        windowWidth: 794
+        scrollY: 0
       },
       jsPDF: {
         unit: 'mm',
         format: 'a4',
         orientation: 'portrait'
       },
-      pagebreak: { mode: ['css', 'legacy'] }
+      pagebreak: { mode: [] }
     };
 
     html2pdf()
       .set(opt)
       .from(pdfDoc)
+      .toPdf()
+      .get('pdf')
+      .then((pdf) => {
+        while (pdf.internal.getNumberOfPages() > 3) {
+          pdf.deletePage(pdf.internal.getNumberOfPages());
+        }
+      })
       .save()
       .then(() => {
         if (renderContainer) renderContainer.style.left = '-9999px';
